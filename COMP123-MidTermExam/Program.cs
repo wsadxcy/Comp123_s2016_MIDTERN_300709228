@@ -7,7 +7,7 @@ using System.Threading.Tasks;
  * Date : June 24th, 2016
  * Date Modified: Jun 24th, 2016
  * Description : MidTerm
- * Version : 0.1 - Created Private fields and Properties
+ * Version : 0.2 - Updated property
  *                  
  */
 namespace COMP123_MidTermExam

@@ -27,15 +27,16 @@ namespace COMP123_MidTermExam
         private int _setSize;
         private Random _random = new Random(Guid.NewGuid().GetHashCode());
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        public int ElementList
+        public List<int> ElementList
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._elementList;
             }
 
             set
             {
+                
             }
         }
 
@@ -43,7 +44,20 @@ namespace COMP123_MidTermExam
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._elementNumber;
+            }
+
+            set
+            {
+                this._elementNumber = value;
+            }
+        }
+
+        public List<int> NumberList
+        {
+            get
+            {
+                return this._numberList;
             }
 
             set
@@ -51,23 +65,11 @@ namespace COMP123_MidTermExam
             }
         }
 
-        public int NumberList
+        public Random Random
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        public int Random
-        {
-            get
-            {
-                throw new System.NotImplementedException();
+                return this._random;
             }
 
             set
@@ -79,11 +81,12 @@ namespace COMP123_MidTermExam
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._setSize;
             }
 
             set
             {
+                this._setSize = value;
             }
         }
 
