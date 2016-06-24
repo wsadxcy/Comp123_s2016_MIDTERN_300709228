@@ -7,7 +7,7 @@ using System.Threading.Tasks;
  * Date : June 24th, 2016
  * Date Modified: Jun 24th, 2016
  * Description : MidTerm
- * Version : 0.2 - Updated property
+ * Version : 0.2 - updated initialize method
  *                  
  */
 namespace COMP123_MidTermExam

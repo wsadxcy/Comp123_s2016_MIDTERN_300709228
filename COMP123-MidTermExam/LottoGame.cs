@@ -27,6 +27,10 @@ namespace COMP123_MidTermExam
         private int _setSize;
         private Random _random = new Random(Guid.NewGuid().GetHashCode());
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+        // CREATE public properties here -----------------------------------------
+
         public List<int> ElementList
         {
             get
@@ -36,7 +40,7 @@ namespace COMP123_MidTermExam
 
             set
             {
-                
+
             }
         }
 
@@ -89,22 +93,19 @@ namespace COMP123_MidTermExam
                 this._setSize = value;
             }
         }
+        // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        // CREATE public properties here -----------------------------------------
-
-            // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-            /**
-             * <summary>
-             * This constructor takes two parameters: elementNumber and setSize
-             * The elementNumber parameter has a default value of 6
-             * The setSize parameter has a default value of 49
-             * </summary>
-             * 
-             * @constructor LottoGame
-             * @param {int} elementNumber
-             * @param {int} setSize
-             */
+        /**
+         * <summary>
+         * This constructor takes two parameters: elementNumber and setSize
+         * The elementNumber parameter has a default value of 6
+         * The setSize parameter has a default value of 49
+         * </summary>
+         * 
+         * @constructor LottoGame
+         * @param {int} elementNumber
+         * @param {int} setSize
+         */
         public LottoGame(int elementNumber = 6, int setSize = 49)
         {
             // assign elementNumber local variable to the ElementNumber property
@@ -120,26 +121,39 @@ namespace COMP123_MidTermExam
             this._build();
         }
 
-        
+
 
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        // CREATE the private _initialize method here -----------------------------
+        // CREATE the private _initialize method here -----------------------------   
+        private void _initialize()
+        {
+            this._numberList = NumberList;
+            this._elementList = ElementList;
+            this._random = Random;
+        }
 
         // CREATE the private _build method here -----------------------------------
+        private void _build()
+        {
+            for (int maxnumber = 0; maxnumber < this.SetSize; maxnumber++)
+            {
+                this.NumberList Add(".");
+            }
+        }
 
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        /**
-         * <summary>
-         * Override the default ToString function so that it displays the current
-         * ElementList
-         * </summary>
-         * 
-         * @override
-         * @method ToString
-         * @returns {string}
-         */
+            /**
+             * <summary>
+             * Override the default ToString function so that it displays the current
+             * ElementList
+             * </summary>
+             * 
+             * @override
+             * @method ToString
+             * @returns {string}
+             */
         public override string ToString()
         {
             // create a string variable named lottoNumberString and intialize it with the empty string
@@ -155,22 +169,15 @@ namespace COMP123_MidTermExam
             return lottoNumberString;
         }
 
-        private void _build()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void _initialize()
-        {
-            throw new System.NotImplementedException();
-        }
+        
 
         public void PickElement()
         {
-            throw new System.NotImplementedException();
+           
         }
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
         // CREATE the public PickElements method here ----------------------------
     }
