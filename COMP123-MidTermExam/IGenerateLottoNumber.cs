@@ -8,5 +8,6 @@ namespace COMP123_MidTermExam
 {
     public interface IGenerateLottoNumber
     {
+        void GenerateLottoNumbers();
     }
 }

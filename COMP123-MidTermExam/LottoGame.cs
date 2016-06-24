@@ -126,6 +126,16 @@ namespace COMP123_MidTermExam
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the private _initialize method here -----------------------------   
+        /**
+         * <summary>
+         * The	private	_initialize	method	will	instantiate	new	objects	for	the	private	fields	_numberList,	_elementList	and	_random
+         * </summary>
+         * 
+         * @NumberList
+         * @ElementList
+         * @Random
+         */
+
         private void _initialize()
         {
             this._numberList = NumberList;
@@ -134,6 +144,16 @@ namespace COMP123_MidTermExam
         }
 
         // CREATE the private _build method here -----------------------------------
+
+        /**
+         * <summary>
+         * This method	will	Add	Integer	Literals	from	1	to	SetSize	to	the	read-only	NumberList	property.	You	will	need	to	use	an	appropriate	looping	construct
+         * </summary>
+         * 
+         * @NumberList
+         * 
+         */
+
         private void _build()
         {
             for (int i = 0; i < this.SetSize; i++)
@@ -169,8 +189,20 @@ namespace COMP123_MidTermExam
             return lottoNumberString;
         }
 
-        
+        // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+        // CREATE the public PickElements method here ----------------------------
+        /**
+             * <summary>
+             * This Method randomly	Select	and	Remove	numbers	from	the	read-only	NumberList	property	and	Add	them	to	the	read-only	ElementList	property.	
+             * </summary>
+             * 
+             * @ElementList
+             * @NumberList
+             * @_build
+             * @Random
+             */
         public void PickElement()
         {
             if
@@ -179,13 +211,13 @@ namespace COMP123_MidTermExam
                 ElementList.Clear();
                 NumberList.Clear();
                 _build();
+                int i = Random.Next(1, 49);
+                NumberList.Removeat(i);
+                ElementList.Add(i);
 
             }
         }
 
-        // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-        // CREATE the public PickElements method here ----------------------------
+        
     }
 }
