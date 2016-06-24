@@ -24,7 +24,7 @@ namespace COMP123_MidTermExam
         private List<int> _elementList;
         private List<int> _numberList;
         private int _elementNumber;
-        private int _setSize;
+        private int _setSize = 49;
         private Random _random = new Random(Guid.NewGuid().GetHashCode());
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -136,9 +136,9 @@ namespace COMP123_MidTermExam
         // CREATE the private _build method here -----------------------------------
         private void _build()
         {
-            for (int maxnumber = 0; maxnumber < this.SetSize; maxnumber++)
+            for (int i = 0; i < this.SetSize; i++)
             {
-                this.NumberList Add(".");
+                NumberList.Add(1) ;
             }
         }
 
@@ -173,7 +173,14 @@ namespace COMP123_MidTermExam
 
         public void PickElement()
         {
-           
+            if
+                 (ElementList.Count > 0)
+            {
+                ElementList.Clear();
+                NumberList.Clear();
+                _build();
+
+            }
         }
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
